@@ -9,36 +9,38 @@ public class Meal {
     int tipPercent;
     int taxPercent;
 
-    public void Solution() throws IOException {
+    public Meal() {
+    }
+
+    public Meal(double mealCost, int tipPercent, int taxPercent) {
+        this.mealCost = mealCost;
+        this.tipPercent = tipPercent;
+        this.taxPercent = taxPercent;
+    }
+
+    public void InteractiveSolution() throws IOException {
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter Meal Cost, Tip Percent and Tax Percent below: ");
         mealCost = Double.parseDouble(bufferedReader.readLine().trim());
         tipPercent = Integer.parseInt(bufferedReader.readLine().trim());
         taxPercent = Integer.parseInt(bufferedReader.readLine().trim());
-        Result.solve(mealCost, tipPercent, taxPercent);
+        System.out.println("The price is: " + InteractiveCalculate());
         bufferedReader.close();
 
     }
 
-}
-
-class Result {
-
-    /*
-     * Complete the 'solve' function below.
-     *
-     * The function accepts following parameters:
-     *  1. DOUBLE meal_cost
-     *  2. INTEGER tip_percent
-     *  3. INTEGER tax_percent
-     */
-
-    public static void solve(double meal_cost, int tip_percent, int tax_percent) {
-        double tip = meal_cost * tip_percent/100;
-        double taxes = meal_cost * tax_percent/100;
-
-        System.out.println(round(meal_cost + tip + taxes));
-
+    public int Calculate(){
+        double tip = mealCost * tipPercent/100;
+        double taxes = mealCost * taxPercent/100;
+        return (int) round(mealCost + tip + taxes);
     }
+
+    public int InteractiveCalculate(){
+        double tip = mealCost * tipPercent/100;
+        double taxes = mealCost * taxPercent/100;
+        return (int) round(mealCost + tip + taxes);
+    }
+
 
 }

@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -7,6 +6,10 @@ public class Main {
 
         //Day2
         Meal meal = new Meal();
-        meal.Solution();
+        meal.InteractiveSolution();
+//        Meal meal = new Meal(100, 10, 2);
+//        int result = meal.Calculate();
+//        System.out.println(result);
+
     }
 }
