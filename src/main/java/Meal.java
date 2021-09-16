@@ -18,6 +18,30 @@ public class Meal {
         this.taxPercent = taxPercent;
     }
 
+    public double getMealCost() {
+        return mealCost;
+    }
+
+    public void setMealCost(double mealCost) {
+        this.mealCost = mealCost;
+    }
+
+    public int getTipPercent() {
+        return tipPercent;
+    }
+
+    public void setTipPercent(int tipPercent) {
+        this.tipPercent = tipPercent;
+    }
+
+    public int getTaxPercent() {
+        return taxPercent;
+    }
+
+    public void setTaxPercent(int taxPercent) {
+        this.taxPercent = taxPercent;
+    }
+
     public void InteractiveSolution() throws IOException {
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
