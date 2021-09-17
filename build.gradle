@@ -18,5 +18,6 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    testLogging {events 'PASSED', 'FAILED', 'SKIPPED'}
     finalizedBy('jacocoTestReport') // always generated after test run
 }
