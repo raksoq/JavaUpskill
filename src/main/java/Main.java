@@ -11,14 +11,17 @@ public class Main {
 //        int result = meal.Calculate();
 //        System.out.println(result);
         //Day4
-        Person person = new Person(18);
-        person.amIOld();
-        person.yearPasses();
-        person.yearPasses();
-        person.yearPasses();
-        person.amIOld();
-        System.out.println(person.getAge());
+//        Person person = new Person(18);
+//        person.amIOld();
+//        person.yearPasses();
+//        person.yearPasses();
+//        person.yearPasses();
+//        person.amIOld();
+//        System.out.println(person.getAge());
 
+        //Java DataTypes
+        VarTypes varTypes = new VarTypes();
+        varTypes.calculations();
 
     }
 }
