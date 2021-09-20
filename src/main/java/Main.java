@@ -20,8 +20,16 @@ public class Main {
 //        System.out.println(person.getAge());
 
         //Java DataTypes
-        VarTypes varTypes = new VarTypes();
-        varTypes.calculations();
+//        VarTypes varTypes = new VarTypes();
+//        varTypes.calculations();
 
+        int number = 1262222789;
+        String numberString = Integer.toString(number);
+        System.out.println(numberString);
+        System.out.println((numberString.chars().count() > 8 )? "Error. greater than 8" : "Correct length");
+        System.out.println(numberString.substring(2));
+        System.out.println(numberString.substring(0,8));
+        Integer number8 = Integer.parseInt(numberString.substring(0,8));
+        System.out.println(number8);
     }
 }
