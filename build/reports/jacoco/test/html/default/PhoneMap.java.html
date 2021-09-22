@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PhoneMap.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JavaUpskill</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">PhoneMap.java</span></div><h1>PhoneMap.java</h1><pre class="source lang-java linenums">import java.util.HashMap;
+import java.util.Scanner;
+
+import static java.lang.Math.pow;
+
+<span class="nc" id="L6">public class PhoneMap {</span>
+    public static void main(String[] args) {
+<span class="nc" id="L8">        Scanner scanner = new Scanner(System.in);</span>
+<span class="nc" id="L9">        HashMap&lt;String, Integer&gt; phoneBook = new HashMap&lt;&gt;();</span>
+        String name;
+        String numberString;
+        int phoneNumber;
+<span class="nc" id="L13">        int counter = 0;</span>
+
+<span class="nc" id="L15">        System.out.println(&quot;Number of entries in the book: &quot;);</span>
+<span class="nc" id="L16">        int numberOfEntries=scanner.nextInt();</span>
+
+<span class="nc bnc" id="L18" title="All 2 branches missed.">        if (numberOfEntries &lt;= pow(10,5)) {</span>
+
+<span class="nc bnc" id="L20" title="All 2 branches missed.">            for (int i = 0; i &lt; numberOfEntries; i++) {</span>
+<span class="nc" id="L21">                name = scanner.next();</span>
+<span class="nc" id="L22">                phoneNumber = scanner.nextInt();</span>
+<span class="nc" id="L23">                numberString = Integer.toString(phoneNumber);</span>
+<span class="nc bnc" id="L24" title="All 2 branches missed.">                if (numberString.chars().count() &gt; 8) {</span>
+<span class="nc" id="L25">                    phoneNumber = Integer.parseInt(numberString.substring(0, 8));</span>
+                }
+<span class="nc" id="L27">                phoneBook.put(name, phoneNumber);</span>
+//            phoneBook.put(scanner.next(), scanner.nextInt());
+            }
+
+<span class="nc" id="L31">            System.out.println(&quot;[Size = &quot;+ phoneBook.size() + &quot; ]Enter name/names to check in phone book: &quot;);</span>
+<span class="nc bnc" id="L32" title="All 4 branches missed.">            while(scanner.hasNext() &amp;&amp; counter &lt;= pow(10,5)){</span>
+<span class="nc" id="L33">                name = scanner.next();</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">                if (phoneBook.containsKey(name)) {</span>
+<span class="nc" id="L35">                    System.out.println(name + &quot;=&quot; + phoneBook.get(name));</span>
+                } else {
+<span class="nc" id="L37">                    System.out.println(&quot;Not found&quot;);</span>
+                }
+            }
+        }
+
+
+<span class="nc" id="L43">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

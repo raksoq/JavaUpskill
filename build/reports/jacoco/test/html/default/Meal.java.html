@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Meal.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JavaUpskill</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Meal.java</span></div><h1>Meal.java</h1><pre class="source lang-java linenums">import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import static java.lang.Math.round;
+
+public class Meal {
+    double mealCost;
+    int tipPercent;
+    int taxPercent;
+
+<span class="nc" id="L12">    public Meal() {</span>
+<span class="nc" id="L13">    }</span>
+
+<span class="nc" id="L15">    public Meal(double mealCost, int tipPercent, int taxPercent) {</span>
+<span class="nc" id="L16">        this.mealCost = mealCost;</span>
+<span class="nc" id="L17">        this.tipPercent = tipPercent;</span>
+<span class="nc" id="L18">        this.taxPercent = taxPercent;</span>
+<span class="nc" id="L19">    }</span>
+
+    public double getMealCost() {
+<span class="nc" id="L22">        return mealCost;</span>
+    }
+
+    public void setMealCost(double mealCost) {
+<span class="nc" id="L26">        this.mealCost = mealCost;</span>
+<span class="nc" id="L27">    }</span>
+
+    public int getTipPercent() {
+<span class="nc" id="L30">        return tipPercent;</span>
+    }
+
+    public void setTipPercent(int tipPercent) {
+<span class="nc" id="L34">        this.tipPercent = tipPercent;</span>
+<span class="nc" id="L35">    }</span>
+
+    public int getTaxPercent() {
+<span class="nc" id="L38">        return taxPercent;</span>
+    }
+
+    public void setTaxPercent(int taxPercent) {
+<span class="nc" id="L42">        this.taxPercent = taxPercent;</span>
+<span class="nc" id="L43">    }</span>
+
+    public void InteractiveSolution() throws IOException {
+
+<span class="nc" id="L47">        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));</span>
+<span class="nc" id="L48">        System.out.println(&quot;Enter Meal Cost, Tip Percent and Tax Percent below: &quot;);</span>
+<span class="nc" id="L49">        mealCost = Double.parseDouble(bufferedReader.readLine().trim());</span>
+<span class="nc" id="L50">        tipPercent = Integer.parseInt(bufferedReader.readLine().trim());</span>
+<span class="nc" id="L51">        taxPercent = Integer.parseInt(bufferedReader.readLine().trim());</span>
+<span class="nc" id="L52">        System.out.println(&quot;The price is: &quot; + InteractiveCalculate());</span>
+<span class="nc" id="L53">        bufferedReader.close();</span>
+
+<span class="nc" id="L55">    }</span>
+
+    public int Calculate(){
+<span class="nc" id="L58">        double tip = mealCost * tipPercent/100;</span>
+<span class="nc" id="L59">        double taxes = mealCost * taxPercent/100;</span>
+<span class="nc" id="L60">        return (int) round(mealCost + tip + taxes);</span>
+    }
+
+    public int InteractiveCalculate(){
+<span class="nc" id="L64">        double tip = mealCost * tipPercent/100;</span>
+<span class="nc" id="L65">        double taxes = mealCost * taxPercent/100;</span>
+<span class="nc" id="L66">        return (int) round(mealCost + tip + taxes);</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
