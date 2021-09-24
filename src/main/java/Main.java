@@ -19,7 +19,7 @@ public class Main {
 //        person.amIOld();
 //        System.out.println(person.getAge());
 
-        //Java DataTypes
+//        Java DataTypes
 //        VarTypes varTypes = new VarTypes();
 //        varTypes.calculations();
 
